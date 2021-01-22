@@ -65,7 +65,7 @@ sed -i '/PKG_SOURCE_VERSION:=/d' package/lean/shadowsocksr-libev/Makefile
 sed -i '/PKG_SOURCE_URL/a PKG_SOURCE_VERSION:=4799b312b8244ec067b8ae9ba4b85c877858976c' \
     package/lean/shadowsocksr-libev/Makefile
 
-# sed -i 's/ipaddr:-"192.168.1.1"/ipaddr:-"192.168.1.10"/' package/base-files/files/bin/config_generate
+sed -i 's/ipaddr:-"192.168.1.1"/ipaddr:-"192.168.68.142"/' package/base-files/files/bin/config_generate
 
 cat >.config <<-EOF
 ## target
@@ -73,22 +73,95 @@ CONFIG_TARGET_armvirt=y
 CONFIG_TARGET_armvirt_64=y
 CONFIG_TARGET_armvirt_64_Default=y
 ## luci app
-CONFIG_PACKAGE_luci-app-adbyby-plus=y
+CONFIG_PACKAGE_luci-app-adguardhome=y
+CONFIG_PACKAGE_luci-app-airplay2=y
 CONFIG_PACKAGE_luci-app-aria2=y
+CONFIG_PACKAGE_luci-app-autoreboot=y
 CONFIG_PACKAGE_luci-app-cifs-mount=y
-CONFIG_PACKAGE_luci-app-samba4=y
+CONFIG_PACKAGE_luci-app-cifsd=y
+CONFIG_PACKAGE_luci-app-commands=y
+CONFIG_PACKAGE_luci-app-diskman=y
+CONFIG_PACKAGE_luci-app-diskman_INCLUDE_btrfs_progs=y
+CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_linear=y
+CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_raid456=y
+CONFIG_PACKAGE_luci-app-diskman_INCLUDE_lsblk=y
+CONFIG_PACKAGE_luci-app-diskman_INCLUDE_mdadm=y
+CONFIG_PACKAGE_luci-app-e2guardian=y
+CONFIG_PACKAGE_luci-app-filetransfer=y
+CONFIG_PACKAGE_luci-app-flowoffload=y
+CONFIG_PACKAGE_luci-app-jd-dailybonus=y
+CONFIG_PACKAGE_luci-app-kodexplorer=y
+CONFIG_PACKAGE_luci-app-minidlna=y
+CONFIG_PACKAGE_luci-app-music-remote-center=y
+CONFIG_PACKAGE_luci-app-netdata=y
+CONFIG_PACKAGE_luci-app-nfs=y
+CONFIG_PACKAGE_luci-app-nlbwmon=y
+CONFIG_PACKAGE_luci-app-qbittorrent=y
+CONFIG_PACKAGE_luci-app-rclone=y
+CONFIG_PACKAGE_luci-app-rclone_INCLUDE_fuse-utils=y
+CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-ng=y
+CONFIG_PACKAGE_luci-app-shairplay=y
+CONFIG_PACKAGE_luci-app-statistics=y
 CONFIG_PACKAGE_luci-app-ttyd=y
-# CONFIG_PACKAGE_luci-app-mentohust=y
+CONFIG_PACKAGE_luci-app-uugamebooster=y
+CONFIG_PACKAGE_luci-app-wireguard=y
+CONFIG_PACKAGE_luci-i18n-airplay2-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-aria2-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-autoreboot-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-cifs-mount-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-cifsd-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-commands-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-docker-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-filetransfer-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-flowoffload-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-kodexplorer-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-minidlna-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-music-remote-center-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-netdata-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-nfs-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-nlbwmon-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-qbittorrent-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-rclone-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-statistics-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-uugamebooster-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-wireguard-zh-cn=y
+CONFIG_PACKAGE_luci-lib-fs=y
+CONFIG_PACKAGE_luci-proto-wireguard=y
+CONFIG_PACKAGE_luci-app-samba4=y
 CONFIG_PACKAGE_luci-app-dockerman=y
 CONFIG_PACKAGE_luci-app-jd-dailybonus=y
 CONFIG_PACKAGE_luci-app-ttnode=y
 CONFIG_PACKAGE_luci-app-argon-config=y
 ## luci theme
 CONFIG_PACKAGE_luci-theme-bootstrap-mod=y
-CONFIG_PACKAGE_luci-theme-argon=y
 ## remove
 # CONFIG_UnblockNeteaseMusic_NodeJS is not set
 # CONFIG_PACKAGE_luci-app-webadmin is not set
+# CONFIG_TARGET_ROOTFS_CPIOGZ is not set
+# CONFIG_TARGET_ROOTFS_EXT4FS is not set
+# CONFIG_TARGET_ROOTFS_INITRAMFS is not set
+# CONFIG_TARGET_ROOTFS_SQUASHFS is not set
+# CONFIG_GRUB_IMAGES is not set
+# CONFIG_PACKAGE_bnx2-firmware is not set
+# CONFIG_PACKAGE_kmod-bnx2 is not set
+# CONFIG_PACKAGE_kmod-e1000 is not set
+# CONFIG_PACKAGE_kmod-forcedeth is not set
+# CONFIG_PACKAGE_kmod-hid is not set
+# CONFIG_PACKAGE_kmod-hid-generic is not set
+# CONFIG_PACKAGE_kmod-hwmon-core is not set
+# CONFIG_PACKAGE_kmod-i2c-algo-bit is not set
+# CONFIG_PACKAGE_kmod-i2c-core is not set
+# CONFIG_PACKAGE_kmod-igb is not set
+# CONFIG_PACKAGE_kmod-input-core is not set
+# CONFIG_PACKAGE_kmod-input-evdev is not set
+# CONFIG_PACKAGE_kmod-ixgbe is not set
+# CONFIG_PACKAGE_kmod-libphy is not set
+# CONFIG_TARGET_ROOTFS_SQUASHFS is not set
+# CONFIG_VMDK_IMAGES is not set
+# CONFIG_v2ray-plugin_INCLUDE_GOPROXY is not set
+# CONFIG_PACKAGE_kmod-usb-core is not set
+# CONFIG_PACKAGE_kmod-usb-hid is not set
 ## others
 CONFIG_BRCMFMAC_SDIO=y
 CONFIG_LUCI_LANG_en=y
