@@ -1,8 +1,8 @@
 name: OpenWrt-CI
 
 on:
-  schedule:
-    - cron: '0 22 * * 5'
+#  schedule:
+#    - cron: '0 22 * * 5'
   workflow_dispatch:
     
 env:
@@ -28,7 +28,7 @@ jobs:
 
       - name: Clone Lean's openwrt
         run: |
-          git clone https://github.com/coolsnowwolf/lede
+          git clone https://github.com/hungleungi/lede
 
       - name: Install feeds & Make config
         env:
